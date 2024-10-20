@@ -1,0 +1,67 @@
+{
+    "name": "modal-success-message",
+    "description": "A simple and reusable modal component for success messages in React.",
+    "author": "Sylvia Carrera",
+    "version": "0.1.0",
+    "private": false,
+    "main": "lib/index.js",
+    "module": "lib/index.js",
+    "files": [
+        "lib",
+        "README.md"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Sylviacarrera/Modal-sucess.git"
+    },
+    "keywords": [
+        "react",
+        "modal",
+        "success-message"
+    ],
+    "scripts": {
+        "start": "cross-env PORT=9091 react-scripts start",
+        "build": "rm -rf lib && babel src --out-dir lib --copy-files",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.25.7",
+        "@babel/core": "^7.25.8",
+        "@babel/preset-env": "^7.25.8",
+        "@babel/preset-react": "^7.25.7",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.21.0",
+        "prettier": "^2.7.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-scripts": "5.0.1",
+        "sass": "^1.54.4"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}
