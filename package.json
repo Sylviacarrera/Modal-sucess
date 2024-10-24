@@ -2,7 +2,7 @@
     "name": "modal-success-message",
     "description": "A simple and reusable modal component for success messages in React.",
     "author": "Sylvia guilhem",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "private": false,
     "main": "lib/index.js",
     "module": "lib/index.js",

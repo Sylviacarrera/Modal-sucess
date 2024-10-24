@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import ModalSuccessMessage from '../lib/components/SuccessMessage'; // Assurez-vous que le chemin est correct
 import './App.scss';
 
+/**
+ * Composant d'application
+ * @returns {JSX.Element} Composant d'application
+ */
 const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
 
