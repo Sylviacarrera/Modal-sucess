@@ -1,7 +1,7 @@
 import React from 'react';
-import '../components/SuccessMessage.scss'; 
+import '../components/SuccessMessage.scss';
 
-const ModalSuccessMessage = ({ isDisplayed, onClose, message }) => {
+const Modal = ({ isDisplayed, onClose, message }) => {
   // Fonction pour fermer la modale
   const handleOverlayClick = (e) => {
     if (e.target.className.includes('modal-overlay')) {
@@ -21,4 +21,4 @@ const ModalSuccessMessage = ({ isDisplayed, onClose, message }) => {
   );
 };
 
-export default ModalSuccessMessage;
+export default Modal
