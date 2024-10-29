@@ -1,20 +1,33 @@
-import { useState } from 'react';
+import './App.scss'
+import { useState } from 'react'
 import Modal from '../lib'
-import './App.scss';
 
 const App = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [modalIsDisplayed, setModalIsDisplayed] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setModalIsDisplayed(true)
+  }
 
   return (
-    <div className="App">
-      <button onClick={() => setModalOpen(true)}>Ouvrir la modale</button>
+    <section className="container">
+      <h1 className="title">Thra Basic Modal React</h1>
+      <form onSubmit={handleSubmit}>
+        <button>Click me</button>
+      </form>
       <Modal
-        isDisplayed={isModalOpen}
-        onClose={() => setModalOpen(false)}
-        message="Employé créé avec succès !"
+        isDisplayed={modalIsDisplayed}
+        onCloseModal={() => setModalIsDisplayed(false)}
+        content={
+          <div id="confirmation" className="modal">
+            <p>This is a modal</p>
+            <p>Click on 'X' button to close me</p>
+          </div>
+        }
       />
-    </div>
-  );
-};
+    </section>
+  )
+}
 
-export default App;
+export default App
