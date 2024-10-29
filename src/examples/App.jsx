@@ -1,29 +1,25 @@
 import React, { useState } from 'react';
-import ModalSuccessMessage from '../lib/components/SuccessMessage'; // Assurez-vous que le chemin est correct
+import ModalSuccessMessage from '../lib'
 import './App.scss';
 
-/**
- * Composant d'application
- * @returns {JSX.Element} Composant d'application
- */
 const App = () => {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const handleOpenModal = () => {
-    setModalOpen(true);
-  };
+  // const handleOpenModal = () => {
+  //   setModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setModalOpen(false);
-  };
+  // const handleCloseModal = () => {
+  //   setModalOpen(false);
+  // };
 
   return (
     <div className="App">
-      <button onClick={handleOpenModal}>Ouvrir la modale</button>
-      <ModalSuccessMessage 
-        isDisplayed={isModalOpen} 
-        onClose={handleCloseModal} 
-        message="Employé créé avec succès !" 
+      <button onClick={() => setModalOpen(true)}>Ouvrir la modale</button>
+      <ModalSuccessMessage
+        isDisplayed={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        message="Employé créé avec succès !"
       />
     </div>
   );
